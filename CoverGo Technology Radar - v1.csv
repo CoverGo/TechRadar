@@ -58,3 +58,25 @@ Cloud-agnostic,Adopt,Techniques,FALSE,CoverGo system is cloud-agnostic and can b
 Hardware keys,Adopt,Techniques,TRUE,"To protect the most precious or powerful accounts, CoverGo uses UbiKey instead of TOTP. Keys are handled by responsible members or stored in a safe box with fingerprint access. "
 Jenkins,Hold,Tools,FALSE,Jenkins is used to power up some CI\CD tasks like synthetic monitoring and deployment of components
 GFlows,Adopt,Tools,TRUE,"Gflows is an OSS tool for GitHub action flows templating. CoverGo uses GFlows to build, spread and manage workflows across different teams and repositories. Thanks to GFlows, we can enjoy strict versioning and proper upgrades. It includes CI\CD security patches management for our GitHub action workflows."
+C#,Adopt,languages-and-frameworks,FALSE,Our primary backend language
+JavaScript,Adopt,languages-and-frameworks,FALSE,Our primary front-end language and one of backend languages
+ReSharper,Adopt,Tools,FALSE,Resharper is our main tool for analyzing and improving code quality
+Code Review,Adopt,Techniques,FALSE,Each pull request goes through code review before being merged
+Git,Adopt,Tools,FALSE,We prefer to use Git for code and configs
+OpenAPI,Adopt,Techniques,FALSE,Simple and useful standard we use to generate REST API and REST API clients
+GraphQL-dotnet,Hold,languages-and-frameworks,FALSE,A .net implementation of GraphQL server. Causes a lot of boilerplate code.
+Hot Chocolate,Trial,languages-and-frameworks,TRUE,A .net implementation of GraphQL server. Very simple and has great integration with databases
+EventStore,Trial,languages-and-frameworks,TRUE,Best implementation of event storage we are aware of
+BDD,Trial,Techniques,FALSE,Behavior-driven development is a development process technique that matches DDD and agile and is a few steps forward from TDD
+Sentry,Trial,Tools,FALSE,Simple and functional error aggregator
+Agile,Adopt,Techniques,FALSE,We practice agile in all our developmend and infra teams
+MariaDB,Adopt,Tools,FALSE,
+Entity Framework,Adopt,Tools,FALSE,
+JSON Logic,Hold,languages-and-frameworks,FALSE,"Notation we use to define some complex computations. Out of fashion, but still loved by some."
+Redis,Adopt,Tools,FALSE,
+SignalR,Adopt,Tools,FALSE,
+OpenTelemetry,Trial,languages-and-frameworks,TRUE,An upcoming open source observability standard. We are waiting for it to be released and implemented so then we can migrate our observability infrastructure to it.
+Figma,Adopt,Tools,FALSE,A great prototyping tool
+Miro,Adopt,Tools,FALSE,"Collaborative whiteboard, great for brainstorming"
+Node.js,Adopt,languages-and-frameworks,FALSE,Our backend JavaScript rintime of choice
+Apollo GraphQL Federation,Assess,Tools,TRUE,
