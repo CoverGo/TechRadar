@@ -38,7 +38,7 @@ No hand-rolled deployments, no ad-hoc cluster changes, no live configuration cha
 GitOps deployments have several advantages compared to traditional imperative deployments. The main one is that the Git repo represents the system's state, and Git history is essentially the same thing as deployment history. Rollbacks are very easy to perform by simply using a previous Git hash."
 Infrastructure as Code,Adopt,Techniques,TRUE,"We are big fans of the Infrastructure as Code (IaC) approach, so we follow and apply as much as possible.
 IaC allows us to manage infrastructure with configuration files rather than through a graphical user interface. It helps us build, change, and manage our infrastructure in a safe, consistent, and repeatable way by defining resource configurations that we can version, reuse, and share."
-GitHub actions,Adopt,Tools,TRUE,"CoverGo CI\CD is powered by GiHub actions. We like it simplicity, configurability via yml and extreme elasticity. "
+GitHub actions,Adopt,Tools,FALSE,"CoverGo CI\CD is powered by GiHub actions. We like it simplicity, configurability via yml and extreme elasticity. "
 Prometheus,Adopt,Tools,FALSE,"Prometheus is responsible for storing all metrics CoverGo collects, including infrastructure, applications, and custom business metrics. "
 Grafana,Adopt,Tools,FALSE,Grafana is our dashboarding solution for infrastrcuture and application-related matters
 Ingress,Adopt,Tools,FALSE,Ingress is used as a standard component for K8s and takes care of SSL and load-balancing
