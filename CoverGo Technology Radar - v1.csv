@@ -49,12 +49,12 @@ Terraform,Trial,Tools,TRUE,"We use Terraform as our IaC tool. It lets us define 
 ·     The human-readable configuration language helps us write infrastructure code quickly.
 ·     Terraform's state allows us to track resource changes throughout our deployments.
 ·     We can commit our configurations to version control to safely collaborate on infrastructure."
-Grafana Loki,Trial,Tools,FALSE,Grafana Loki is our main tool to store logs and aggregate them across all environments 
-Grafana Tempo,Trial,Tools,TRUE,Grafana Tempo is our main tracing tool to see calls chains between microservices
-TDD,Trial,Techniques,TRUE,Test Driven Development is the way we think aout and develop software. CoverGo teams see TDD as efficiency increase practice reducing total efforts required to ship and maintain a feature or component.
+Grafana Loki,Adopt,Tools,FALSE,Grafana Loki is our main tool to store logs and aggregate them across all environments 
+Grafana Tempo,Adopt,Tools,TRUE,Grafana Tempo is our main tracing tool to see calls chains between microservices
+TDD,Adopt,Techniques,FALSE,Test Driven Development is the way we think aout and develop software. CoverGo teams see TDD as efficiency increase practice reducing total efforts required to ship and maintain a feature or component.
 Docker compose,Hold,Tools,FALSE,"We use docker compose during local development as a fast way to launch the whole environment for integration tests, complex feature development requiring several services running, or debugging. "
 OSS,Adopt,Techniques,FALSE,CoverGo is committed to the usage of Open Source tooling and components. We believe in OSS culture and like to participate as active user and contributor to the projects we use. It gives us more flexibility and freedom of choice. CoverGo publishes some of the internal components as OSS as well. 
 Cloud-agnostic,Adopt,Techniques,FALSE,CoverGo system is cloud-agnostic and can be hosted on any cloud provider or even on-premises depending on the client's needs. Kubernetes act as a layer of compatibility. The ability to avoid vendor lock-in allows us to become more flexible to adapts to our clients. 
 Hardware keys,Adopt,Techniques,TRUE,"To protect the most precious or powerful accounts, CoverGo uses UbiKey instead of TOTP. Keys are handled by responsible members or stored in a safe box with fingerprint access. "
 Jenkins,Hold,Tools,FALSE,Jenkins is used to power up some CI\CD tasks like synthetic monitoring and deployment of components
-GFlows,Trial,Tools,TRUE,"Gflows is an OSS tool for GitHub action flows templating. CoverGo uses GFlows to build, spread and manage workflows across different teams and repositories. Thanks to GFlows, we can enjoy strict versioning and proper upgrades. It includes CI\CD security patches management for our GitHub action workflows."
+GFlows,Adopt,Tools,TRUE,"Gflows is an OSS tool for GitHub action flows templating. CoverGo uses GFlows to build, spread and manage workflows across different teams and repositories. Thanks to GFlows, we can enjoy strict versioning and proper upgrades. It includes CI\CD security patches management for our GitHub action workflows."
