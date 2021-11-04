@@ -29,7 +29,7 @@ AWS,Adopt,Platforms,FALSE,AWS is one of our cloud providers hosting a lot of inf
 Azure,Adopt,Platforms,FALSE,Azure is one of our cloud providers available as an option to provision client's deployments
 AliCloud,Adopt,Platforms,FALSE,AliCloud is one of our cloud providers hosting some of infrastructure and clients
 Google Cloud,Adopt,Platforms,FALSE,Google cloud is one of our cloud providers available as an option to provision client's deployments
-Trello,Adopt,Tools,FALSE,We used Trello before switching to Jira.
+Trello,Hold,Tools,FALSE,We used Trello before switching to Jira.
 GitOps,Trial,Techniques,TRUE,"CoverGo stores the state of the system and application deployment in Git.
 Git is always the source of truth for what happens in the system.
 If we want to change the system's state, we need to perform a Git operation such as creating a commit or opening a pull request. Git commands and flows control deployments, tests, and rollbacks.
