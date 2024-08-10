@@ -1,26 +1,24 @@
 name,ring,quadrant,isNew,description
 Kubernetes,Adopt,Platforms,FALSE,"Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications. CoverGo runs everything on top of it. K8s allows CoverGo to abstract away from the environment provider and be cloud-agnostic. If k8s is available somewhere, CoverGo can be deployed there."
-Flux,Trial,Tools,TRUE,"Flux is a set of continuous and progressive delivery solutions for Kubernetes CoverGo uses for continuous delivery. It monitors the docker registry and cluster state in a git repository to find out when a new version of an image is available and should be deployed. "
+Flux,Adopt,Tools,FALSE,"Flux is a set of continuous and progressive delivery solutions for Kubernetes CoverGo uses for continuous delivery. It monitors the docker registry and cluster state in a git repository to find out when a new version of an image is available and should be deployed. "
 Microservices,Adopt,Techniques,FALSE,Microservices architecture is the cornerstone of CoverGo. We use it extensively and look at it as fundamental and basic practice in modern software development.
 DDD,Trial,Techniques,TRUE,"Domain Drived Design (DDD) is a software engineering approach and set of practices popularized by Eric Evans. The insurance domain is very complex, so we are glad to tackle its complexity with the best industry-proven solutions. DDD is more than a development practice in CoverGo. We use it to form Ubiquitous language to communicate between internal teams and roles. Developers, product owners, and business analysts speak the same language and share the same abstractions across requirements, documentation, user journeys, and source code. We are always glad to include our customers in this knowledge-sharing process as well. "
-Event Sourcing,Hold,Techniques,FALSE,"Event Sourcing (ES) is a software engineering pattern popularized by Martin Fauler. The fundamental idea of Event Sourcing is that of ensuring every change to the state of an application is captured in an event object and that these event objects are themselves stored in the sequence they were applied for the same lifetime as the application state itself. CoverGo uses ES for most of the backend services, allowing ""what if"" and ""time-lapse"" scenarios, as well as providing robust audit logs and much more. "
-"CQRS ",Trial,Techniques,TRUE,"Command Query Responsiility Segregation is an well-known engineering pattern itroduced by Greg Young. Insurance domain is a good fit to enjoy benefits from it. We use CQRS in backend services and find it amaizing. "
-GraphQL,Adopt,languages-and-frameworks,FALSE,"GraphQL is the face of CoverGo. All our public APIs are GraphQL-based. We like GraphQL as it allows unprecedented flexibility to run multiple frontends without building a thick and costly BFF layer, expanding it for each new touchpoint that appeared."
+Event Sourcing,Hold,Techniques,FALSE,"Event Sourcing (ES) is a software engineering pattern popularized by Martin Fauler. The fundamental idea of Event Sourcing is that of ensuring every change to the state of an application is captured in an event object and that these event objects are themselves stored in the sequence they were applied for the same lifetime as the application state itself. CoverGo used ES in some of backend services, allowing ""what if"" and ""time-lapse"" scenarios, as well as providing robust audit logs and much more. "
+"CQRS ",Trial,Techniques,TRUE,"Command Query Responsiility Segregation is an well-known engineering pattern itroduced by Greg Young. Insurance domain is a good fit to enjoy benefits from it. We use CQRS in backend services and find it amazing. "
+GraphQL,Adopt,languages-and-frameworks,FALSE,"GraphQL is the face of CoverGo. Most of our public APIs are GraphQL-based. We like GraphQL as it allows unprecedented flexibility to run multiple frontends without building a thick and costly BFF layer, expanding it for each new touchpoint that appeared."
 API Gateway,Adopt,Techniques,FALSE,The only part exposed to external word is API Gateway. We like this pattern and combine security benefits with authentication and BFF functionality.
 Continious Integration,Adopt,Techniques,FALSE,"We build often and fast, running sophisticated build workflows to make sure our software is ready for production without sacrificing features. Continuous Integration is a core practice we adopted. Combined with GitOps, a good CI became our daily routine and a part of the tech culture. "
 Continious Deployment,Adopt,Techniques,FALSE,"CoverGo SaaS offering receives several updates per day because we can deploy even every commit, thanks to Continuous Deployment practice. CD is based on the docker registry, version-based tags of docker images, and Continuous Integration process. "
-GitFlow,Assess,Techniques,TRUE,"To support isolated feature development, multiple environments, complex releases, and flexible deployments, we use the GitFlow branching model. "
-SonarCloud,Trial,Tools,TRUE,"CoverGo treats security as a top priority and think source code scanning is very important. SonarCloud provides us per-PR scanning looking for security vurnerabilities, checking CoverGO source code, including OWASP top10 and CWE top25."
+Scaled Trunk-Based Development,Trial,Techniques,TRUE,"To support isolated feature development, multiple environments, complex releases, and flexible deployments, we use the Scaled Trunk Based Development branching model. "
+SonarCloud,Trial,Tools,FALSE,"CoverGo treats security as a top priority and think source code scanning is very important. SonarCloud provides us per-PR scanning looking for security vurnerabilities, checking CoverGO source code, including OWASP top10 and CWE top25."
 GitHub,Adopt,Platforms,FALSE,"GitHub is our choice for storing source code and CI\CD via GitHub actions. We like GitHub Pull Requests functionality and code owners, tons of integrations, and a high level of automation. It helps us to run mandatory code reviews for the new code with no hassle. "
 .Net 6,Adopt,languages-and-frameworks,FALSE,Most of the backend services we have are written in C# and we use the latest .Net framework all the time.
-ASP.Net 6,Adopt,languages-and-frameworks,FALSE,"ASP.Net 6 is the web framework CoverGo uses to power up our microservices. Performant, stable, proven, good."
+ASP.Net 6,Adopt,languages-and-frameworks,FALSE,"ASP.Net 6 is the web framework CoverGo uses to power up most of our microservices. Performant, stable, proven, good."
 .Net 7,Assess,languages-and-frameworks,TRUE,"Backend leads decided that following with .NET releases is a good idea, so we should try .NET 7 for new services"
 Docker,Adopt,Tools,FALSE,All application components in CoverGo are dockerized to abstract away from the environment details. We prefer Alpine Linux-based images because of their small size and performance.
 Vue.js,Adopt,languages-and-frameworks,FALSE,"CoverGo has a lot of frontends and different types of touchpoints. One of the reasons it is possible is the usage of Vue.js, for whom we send our warm love. "
-REST,Hold,languages-and-frameworks,FALSE,We use REST for most of our internal microservice communications but gradually replacing it with GraphQL
+REST,Adopt,languages-and-frameworks,FALSE,"We use REST for client integrations and for communication between microservices, also we expose part of our public API as REST."
 MongoDb,Adopt,Tools,FALSE,"Main database for CoverGo. We use Mongo because of the need for dynamic JSON, rules, and data structure raising from the flexibility of No Code\Low Code nature of CoverGo."
-DocumentDb,Adopt,Tools,FALSE,One of the mongo-compatabile database we use
-CosmosDb,Adopt,Tools,FALSE,One of the mongo-compatabile database we use
 StatusPage,Trial,Tools,TRUE,StatusPage is the official way to share the current situation with CoverGo platform with public. Feel free to subscribe for updates at https://status.covergo.cloud/
 OpsGenie,Trial,Tools,TRUE,"Incident management lives here, in OpsGenie. We use it for any incident impacting smth more than just a development environment. OpsGenie also takes care of alerting, on-call schedule, and, of course, status page integration."
 Jira,Adopt,Tools,FALSE,"Jira is the task tracker of our choice, spiced with some plugins"
@@ -28,37 +26,36 @@ Confluence,Adopt,Tools,FALSE,"Confluence is used as knowldge centre in CoverGo, 
 Slack,Adopt,Tools,FALSE,"Slack is our main communication tool. It just works and we like it. "
 AWS,Adopt,Platforms,FALSE,AWS is one of our cloud providers hosting a lot of infrastructure and clients
 Azure,Adopt,Platforms,FALSE,Azure is one of our cloud providers available as an option to provision client's deployments
-AliCloud,Adopt,Platforms,FALSE,AliCloud is one of our cloud providers hosting some of infrastructure and clients
 Google Cloud,Adopt,Platforms,FALSE,Google cloud is one of our cloud providers available as an option to provision client's deployments
 Trello,Hold,Tools,FALSE,We used Trello before switching to Jira.
-GitOps,Trial,Techniques,TRUE,"CoverGo stores the state of the system and application deployment in Git.
+GitOps,Trial,Techniques,FALSE,"CoverGo stores the state of the system and application deployment in Git.
 Git is always the source of truth for what happens in the system.
 If we want to change the system's state, we need to perform a Git operation such as creating a commit or opening a pull request. Git commands and flows control deployments, tests, and rollbacks.
 Once the Git state is changed, the cluster state should match what is described in the Git repository.
 No hand-rolled deployments, no ad-hoc cluster changes, no live configuration changes are allowed. If a change needs to happen, it must be committed to Git first.
 GitOps deployments have several advantages compared to traditional imperative deployments. The main one is that the Git repo represents the system's state, and Git history is essentially the same thing as deployment history. Rollbacks are very easy to perform by simply using a previous Git hash."
-Infrastructure as Code,Adopt,Techniques,TRUE,"We are big fans of the Infrastructure as Code (IaC) approach, so we follow and apply as much as possible.
+Infrastructure as Code,Adopt,Techniques,FALSE,"We are big fans of the Infrastructure as Code (IaC) approach, so we follow and apply as much as possible.
 IaC allows us to manage infrastructure with configuration files rather than through a graphical user interface. It helps us build, change, and manage our infrastructure in a safe, consistent, and repeatable way by defining resource configurations that we can version, reuse, and share."
 GitHub actions,Adopt,Tools,FALSE,"CoverGo CI\CD is powered by GiHub actions. We like it simplicity, configurability via yml and extreme elasticity. "
 Prometheus,Adopt,Tools,FALSE,"Prometheus is responsible for storing all metrics CoverGo collects, including infrastructure, applications, and custom business metrics. "
 Grafana,Adopt,Tools,FALSE,Grafana is our dashboarding solution for infrastrcuture and application-related matters
 Ingress,Adopt,Tools,FALSE,Ingress is used as a standard component for K8s and takes care of SSL and load-balancing
-Helm,Trial,Tools,TRUE,"CoverGo uses helm charts as a part of microservices, and service owners are responsible for it. Helm allows us to reach incredible speed in deployments and avoid dependency issues.  "
-LastPass,Adopt,Tools,TRUE,"Security starts with day-to-day operations. Every employee in CoverGo uses LastPass to store and share sensitive information like credentials, ssh keys, TOTP, card numbers, Wi-Fi passwords and other. "
-Terraform,Trial,Tools,TRUE,"We use Terraform as our IaC tool. It lets us define resources and infrastructure in human-readable, declarative configuration files and manages our infrastructure's lifecycle. Using Terraform has several advantages over manually managing your infrastructure:
+Helm,Adopt,Tools,FALSE,"CoverGo uses helm charts as a part of microservices, and service owners are responsible for it. Helm allows us to reach incredible speed in deployments and avoid dependency issues.  "
+1Password,Adopt,Tools,TRUE,"Security starts with day-to-day operations. Every employee in CoverGo uses 1Password to store and share sensitive information like credentials, ssh keys, TOTP, card numbers, Wi-Fi passwords and other. "
+Terraform,Adopt,Tools,FALSE,"We use Terraform as our IaC tool. It lets us define resources and infrastructure in human-readable, declarative configuration files and manages our infrastructure's lifecycle. Using Terraform has several advantages over manually managing your infrastructure:
 ·     Terraform can manage infrastructure on multiple cloud platforms.
 ·     The human-readable configuration language helps us write infrastructure code quickly.
 ·     Terraform's state allows us to track resource changes throughout our deployments.
 ·     We can commit our configurations to version control to safely collaborate on infrastructure."
 Grafana Loki,Adopt,Tools,FALSE,"Grafana Loki is our main tool to store logs and aggregate them across all environments "
-Grafana Tempo,Adopt,Tools,TRUE,Grafana Tempo is our main tracing tool to see calls chains between microservices
+Grafana Tempo,Adopt,Tools,FALSE,Grafana Tempo is our main tracing tool to see calls chains between microservices
 TDD,Adopt,Techniques,FALSE,Test Driven Development is the way we think aout and develop software. CoverGo teams see TDD as efficiency increase practice reducing total efforts required to ship and maintain a feature or component.
 Docker compose,Adopt,Tools,FALSE,"We use docker compose during local development as a fast way to launch the whole environment for integration tests, complex feature development requiring several services running, or debugging. Also used in CI testing and preview envs."
 OSS,Adopt,Techniques,FALSE,"CoverGo is committed to the usage of Open Source tooling and components. We believe in OSS culture and like to participate as active user and contributor to the projects we use. It gives us more flexibility and freedom of choice. CoverGo publishes some of the internal components as OSS as well. "
 Cloud-agnostic,Adopt,Techniques,FALSE,"CoverGo system is cloud-agnostic and can be hosted on any cloud provider or even on-premises depending on the client's needs. Kubernetes act as a layer of compatibility. The ability to avoid vendor lock-in allows us to become more flexible to adapts to our clients. "
 Hardware keys,Adopt,Techniques,TRUE,"To protect the most precious or powerful accounts, CoverGo uses UbiKey instead of TOTP. Keys are handled by responsible members or stored in a safe box with fingerprint access. "
 Jenkins,Hold,Tools,FALSE,Jenkins is used to power up some CI\CD tasks like synthetic monitoring and deployment of components
-GFlows,Adopt,Tools,TRUE,"Gflows is an OSS tool for GitHub action flows templating. CoverGo uses GFlows to build, spread and manage workflows across different teams and repositories. Thanks to GFlows, we can enjoy strict versioning and proper upgrades. It includes CI\CD security patches management for our GitHub action workflows."
+GFlows,Hold,Tools,TRUE,Gflows is currently deprecated in favor of GitHub reusable workflows.
 C#,Adopt,languages-and-frameworks,FALSE,Our primary backend language
 JavaScript,Adopt,languages-and-frameworks,FALSE,Our primary front-end language and one of backend languages
 ReSharper,Adopt,Tools,FALSE,Resharper is our main tool for analyzing and improving code quality
@@ -81,6 +78,8 @@ Figma,Adopt,Tools,FALSE,A great prototyping tool
 Miro,Adopt,Tools,FALSE,"Collaborative whiteboard, great for brainstorming"
 Node.js,Adopt,languages-and-frameworks,FALSE,Our backend JavaScript rintime of choice
 Apollo GraphQL Federation,Assess,Tools,TRUE,
-Elsa,Trial,languages-and-frameworks,TRUE,Elsa is an async workflow manager with a dashboard and an ability to define custom workflows from UI'
+Elsa,Hold,languages-and-frameworks,TRUE,Stopped using it.
 xUnit,Adopt,languages-and-frameworks,FALSE,Modern c# testing framework
-Specflow,Trial,languages-and-frameworks,TRUE,BDD Testing framework where you write tests in Gherkin and write c# code binding/steps
+Specflow,Hold,languages-and-frameworks,TRUE,BDD Testing framework where you write tests in Gherkin and write c# code binding/steps. Stopped using it because library support stopped.
+NestJS,Trial,languages-and-frameworks,TRUE,It's used to develop new NodeJS services.
+PostgreSQL,Adopt,Tools,FALSE,Used as database server for new NodeJS services.
