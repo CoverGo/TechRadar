@@ -2,19 +2,17 @@ name,ring,quadrant,isNew,description
 Kubernetes,Adopt,Platforms,FALSE,"Kubernetes, also known as K8s, is an open-source system for automating deployment, scaling, and management of containerized applications. CoverGo runs everything on top of it. K8s allows CoverGo to abstract away from the environment provider and be cloud-agnostic. If k8s is available somewhere, CoverGo can be deployed there."
 Flux,Adopt,Tools,FALSE,"Flux is a set of continuous and progressive delivery solutions for Kubernetes CoverGo uses for continuous delivery. It monitors the docker registry and cluster state in a git repository to find out when a new version of an image is available and should be deployed. "
 Microservices,Adopt,Techniques,FALSE,Microservices architecture is the cornerstone of CoverGo. We use it extensively and look at it as fundamental and basic practice in modern software development.
-DDD,Trial,Techniques,TRUE,"Domain Drived Design (DDD) is a software engineering approach and set of practices popularized by Eric Evans. The insurance domain is very complex, so we are glad to tackle its complexity with the best industry-proven solutions. DDD is more than a development practice in CoverGo. We use it to form Ubiquitous language to communicate between internal teams and roles. Developers, product owners, and business analysts speak the same language and share the same abstractions across requirements, documentation, user journeys, and source code. We are always glad to include our customers in this knowledge-sharing process as well. "
+DDD,Adopt,Techniques,TRUE,"Domain Drived Design (DDD) is a software engineering approach and set of practices popularized by Eric Evans. The insurance domain is very complex, so we are glad to tackle its complexity with the best industry-proven solutions. DDD is more than a development practice in CoverGo. We use it to form Ubiquitous language to communicate between internal teams and roles. Developers, product owners, and business analysts speak the same language and share the same abstractions across requirements, documentation, user journeys, and source code. We are always glad to include our customers in this knowledge-sharing process as well. "
 Event Sourcing,Hold,Techniques,FALSE,"Event Sourcing (ES) is a software engineering pattern popularized by Martin Fauler. The fundamental idea of Event Sourcing is that of ensuring every change to the state of an application is captured in an event object and that these event objects are themselves stored in the sequence they were applied for the same lifetime as the application state itself. CoverGo used ES in some of backend services, allowing ""what if"" and ""time-lapse"" scenarios, as well as providing robust audit logs and much more. "
-"CQRS ",Trial,Techniques,TRUE,"Command Query Responsiility Segregation is an well-known engineering pattern itroduced by Greg Young. Insurance domain is a good fit to enjoy benefits from it. We use CQRS in backend services and find it amazing. "
+"CQRS ",Adopt,Techniques,TRUE,"Command Query Responsiility Segregation is an well-known engineering pattern itroduced by Greg Young. Insurance domain is a good fit to enjoy benefits from it. We use CQRS in backend services and find it amazing. "
 GraphQL,Adopt,languages-and-frameworks,FALSE,"GraphQL is the face of CoverGo. Most of our public APIs are GraphQL-based. We like GraphQL as it allows unprecedented flexibility to run multiple frontends without building a thick and costly BFF layer, expanding it for each new touchpoint that appeared."
 API Gateway,Adopt,Techniques,FALSE,The only part exposed to external word is API Gateway. We like this pattern and combine security benefits with authentication and BFF functionality.
 Continious Integration,Adopt,Techniques,FALSE,"We build often and fast, running sophisticated build workflows to make sure our software is ready for production without sacrificing features. Continuous Integration is a core practice we adopted. Combined with GitOps, a good CI became our daily routine and a part of the tech culture. "
 Continious Deployment,Adopt,Techniques,FALSE,"CoverGo SaaS offering receives several updates per day because we can deploy even every commit, thanks to Continuous Deployment practice. CD is based on the docker registry, version-based tags of docker images, and Continuous Integration process. "
-Scaled Trunk-Based Development,Trial,Techniques,TRUE,"To support isolated feature development, multiple environments, complex releases, and flexible deployments, we use the Scaled Trunk Based Development branching model. "
-SonarCloud,Trial,Tools,FALSE,"CoverGo treats security as a top priority and think source code scanning is very important. SonarCloud provides us per-PR scanning looking for security vurnerabilities, checking CoverGO source code, including OWASP top10 and CWE top25."
+Scaled Trunk-Based Development,Adopt,Techniques,TRUE,"To support isolated feature development, multiple environments, complex releases, and flexible deployments, we use the Scaled Trunk Based Development branching model. "
+SonarCloud,Adopt,Tools,FALSE,"CoverGo treats security as a top priority and think source code scanning is very important. SonarCloud provides us per-PR scanning looking for security vurnerabilities, checking CoverGO source code, including OWASP top10 and CWE top25."
 GitHub,Adopt,Platforms,FALSE,"GitHub is our choice for storing source code and CI\CD via GitHub actions. We like GitHub Pull Requests functionality and code owners, tons of integrations, and a high level of automation. It helps us to run mandatory code reviews for the new code with no hassle. "
-.Net 6,Adopt,languages-and-frameworks,FALSE,Most of the backend services we have are written in C# and we use the latest .Net framework all the time.
-ASP.Net 6,Adopt,languages-and-frameworks,FALSE,"ASP.Net 6 is the web framework CoverGo uses to power up most of our microservices. Performant, stable, proven, good."
-.Net 7,Assess,languages-and-frameworks,TRUE,"Backend leads decided that following with .NET releases is a good idea, so we should try .NET 7 for new services"
+.NET,Adopt,languages-and-frameworks,FALSE,Most of the backend services we have are written in C# and we use the latest .Net framework all the time.
 Docker,Adopt,Tools,FALSE,All application components in CoverGo are dockerized to abstract away from the environment details. We prefer Alpine Linux-based images because of their small size and performance.
 Vue.js,Adopt,languages-and-frameworks,FALSE,"CoverGo has a lot of frontends and different types of touchpoints. One of the reasons it is possible is the usage of Vue.js, for whom we send our warm love. "
 REST,Adopt,languages-and-frameworks,FALSE,"We use REST for client integrations and for communication between microservices, also we expose part of our public API as REST."
@@ -28,7 +26,7 @@ AWS,Adopt,Platforms,FALSE,AWS is one of our cloud providers hosting a lot of inf
 Azure,Adopt,Platforms,FALSE,Azure is one of our cloud providers available as an option to provision client's deployments
 Google Cloud,Adopt,Platforms,FALSE,Google cloud is one of our cloud providers available as an option to provision client's deployments
 Trello,Hold,Tools,FALSE,We used Trello before switching to Jira.
-GitOps,Trial,Techniques,FALSE,"CoverGo stores the state of the system and application deployment in Git.
+GitOps,Adopt,Techniques,FALSE,"CoverGo stores the state of the system and application deployment in Git.
 Git is always the source of truth for what happens in the system.
 If we want to change the system's state, we need to perform a Git operation such as creating a commit or opening a pull request. Git commands and flows control deployments, tests, and rollbacks.
 Once the Git state is changed, the cluster state should match what is described in the Git repository.
@@ -73,7 +71,7 @@ Entity Framework,Hold,Tools,FALSE,"We used it before, but decided to go with mon
 JSON Logic,Hold,languages-and-frameworks,FALSE,"Notation we use to define some complex computations. Out of fashion, but still loved by some."
 Redis,Adopt,Tools,FALSE,
 SignalR,Adopt,Tools,FALSE,
-OpenTelemetry,Trial,languages-and-frameworks,TRUE,An upcoming open source observability standard. We are waiting for it to be released and implemented so then we can migrate our observability infrastructure to it.
+OpenTelemetry,Adopt,languages-and-frameworks,TRUE,An upcoming open source observability standard. We are waiting for it to be released and implemented so then we can migrate our observability infrastructure to it.
 Figma,Adopt,Tools,FALSE,A great prototyping tool
 Miro,Adopt,Tools,FALSE,"Collaborative whiteboard, great for brainstorming"
 Node.js,Adopt,languages-and-frameworks,FALSE,Our backend JavaScript rintime of choice
@@ -81,5 +79,6 @@ Apollo GraphQL Federation,Assess,Tools,TRUE,
 Elsa,Hold,languages-and-frameworks,TRUE,Stopped using it.
 xUnit,Adopt,languages-and-frameworks,FALSE,Modern c# testing framework
 Specflow,Hold,languages-and-frameworks,TRUE,BDD Testing framework where you write tests in Gherkin and write c# code binding/steps. Stopped using it because library support stopped.
-NestJS,Trial,languages-and-frameworks,TRUE,It's used to develop new NodeJS services.
+NestJS,Adopt,languages-and-frameworks,TRUE,It's used to develop new NodeJS services.
 PostgreSQL,Adopt,Tools,FALSE,Used as database server for new NodeJS services.
+Temporal,Adopt,Tools,TRUE,Used to implement business workflows.
